@@ -7,38 +7,38 @@ import Typed, {TypedOptions} from 'typed.js';
   styleUrls: ['ngx-typed-js.component.css']
 })
 export class NgxTypedJsComponent implements OnInit, AfterViewInit {
-  @Input() cursorColor?: string;
+  @Input() private cursorColor?: string;
 
-  @Input() strings?: string[];
-  @Input() stringsElement?: string;
-  @Input() typeSpeed?: number;
-  @Input() startDelay?: number;
-  @Input() backSpeed?: number;
-  @Input() smartBackspace?: boolean;
-  @Input() shuffle?: boolean;
-  @Input() backDelay?: number;
-  @Input() fadeOut?: boolean;
-  @Input() fadeOutClass?: string;
-  @Input() fadeOutDelay?: boolean;
-  @Input() oop?: boolean;
-  @Input() oopCount?: number;
-  @Input() showCursor?: boolean;
-  @Input() cursorChar?: string;
-  @Input() autoInsertCss?: boolean;
-  @Input() attr?: string;
-  @Input() bindInputFocusEvents?: boolean;
-  @Input() contentType?: string;
+  @Input() private strings?: string[];
+  @Input() private stringsElement?: string;
+  @Input() private typeSpeed?: number;
+  @Input() private startDelay?: number;
+  @Input() private backSpeed?: number;
+  @Input() private smartBackspace?: boolean;
+  @Input() private shuffle?: boolean;
+  @Input() private backDelay?: number;
+  @Input() private fadeOut?: boolean;
+  @Input() private fadeOutClass?: string;
+  @Input() private fadeOutDelay?: boolean;
+  @Input() private loop?: boolean;
+  @Input() private loopCount?: number;
+  @Input() private showCursor?: boolean;
+  @Input() private cursorChar?: string;
+  @Input() private autoInsertCss?: boolean;
+  @Input() private attr?: string;
+  @Input() private bindInputFocusEvents?: boolean;
+  @Input() private contentType?: string;
 
-  @Output() completed: EventEmitter<void> = new EventEmitter<void>();
-  @Output() preStringTyped: EventEmitter<number> = new EventEmitter<number>();
-  @Output() stringTyped: EventEmitter<number> = new EventEmitter<number>();
-  @Output() lastStringBackspaced: EventEmitter<void> = new EventEmitter<void>();
-  @Output() typingPaused: EventEmitter<number> = new EventEmitter<number>();
-  @Output() typingResumed: EventEmitter<number> = new EventEmitter<number>();
-  @Output() reset: EventEmitter<void> = new EventEmitter<void>();
-  @Output() stopped: EventEmitter<number> = new EventEmitter<number>();
-  @Output() started: EventEmitter<number> = new EventEmitter<number>();
-  @Output() destroyed: EventEmitter<void> = new EventEmitter<void>();
+  @Output() private completed: EventEmitter<void> = new EventEmitter<void>();
+  @Output() private preStringTyped: EventEmitter<number> = new EventEmitter<number>();
+  @Output() private stringTyped: EventEmitter<number> = new EventEmitter<number>();
+  @Output() private lastStringBackspaced: EventEmitter<void> = new EventEmitter<void>();
+  @Output() private typingPaused: EventEmitter<number> = new EventEmitter<number>();
+  @Output() private typingResumed: EventEmitter<number> = new EventEmitter<number>();
+  @Output() private reset: EventEmitter<void> = new EventEmitter<void>();
+  @Output() private stopped: EventEmitter<number> = new EventEmitter<number>();
+  @Output() private started: EventEmitter<number> = new EventEmitter<number>();
+  @Output() private destroyed: EventEmitter<void> = new EventEmitter<void>();
 
   private typed: Typed;
   @ViewChild('wrapper') private content;
@@ -93,8 +93,8 @@ export class NgxTypedJsComponent implements OnInit, AfterViewInit {
       fadeOut: this.fadeOut,
       fadeOutClass: this.fadeOutClass,
       fadeOutDelay: this.fadeOutDelay,
-      oop: this.oop,
-      oopCount: this.oopCount,
+      loop: this.loop,
+      loopCount: this.loopCount,
       showCursor: this.showCursor,
       autoInsertCss: this.autoInsertCss,
       attr: this.attr,
