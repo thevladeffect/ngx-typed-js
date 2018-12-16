@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "demo",
       "schematics": {},
       "architect": {
         "build": {
@@ -123,6 +123,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-typed-js": {
+      "root": "projects/ngx-typed-js",
+      "sourceRoot": "projects/ngx-typed-js/src",
+      "projectType": "library",
+      "prefix": "",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-typed-js/tsconfig.lib.json",
+            "project": "projects/ngx-typed-js/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-typed-js/src/test.ts",
+            "tsConfig": "projects/ngx-typed-js/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-typed-js/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-typed-js/tsconfig.lib.json",
+              "projects/ngx-typed-js/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
