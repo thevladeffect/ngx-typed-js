@@ -50,8 +50,7 @@ The `typing` class also allows you to just animate certain parts of a string:
 ## Accessing methods exposed by vanilla Typed.js
 You can access the methods on your `Typed` object by using a `@ViewChild` decorator:
 ```javascript
-@ViewChild(ColorSampleComponent)
-  primarySampleComponent: ColorSampleComponent;
+  @ViewChild(NgxTypedJsComponent) typed: NgxTypedJsComponent;
 ```
 
 ## Properties
@@ -114,6 +113,11 @@ You can listen to the following events:
   <h2 class="typing"></h2>
 </ngx-typed-js>
 ```
+
+## Thank you
+Big thanks to the author of [vue-typed-js](https://github.com/Orlandster/vue-typed-js) from which I inspired heavily and of course to the original author of [Typed.js](https://github.com/mattboldt/typed.js/).
+
+Contributions are welcome.
 
 # License
 [MIT](https://opensource.org/licenses/MIT)

@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:library": "ng build ngx-typed-js"
+    "build:library": "ng build ngx-typed-js; cp README.md dist/ngx-typed-js/README.md"
   },
   "private": true,
   "dependencies": {
