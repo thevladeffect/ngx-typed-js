@@ -13,7 +13,7 @@ Typed.js is a library that types. Enter in any string, and watch it type at the 
 # Installation
 
 ```
-npm install --save vue-typed-js
+npm install --save ngx-typed-js
 ```
 
 ## Import in your module
