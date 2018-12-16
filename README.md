@@ -4,6 +4,8 @@ An Angular integration for [Typed.js](https://github.com/mattboldt/typed.js/).
 
 Typed.js is a library that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
 
+[![NPM](https://nodei.co/npm/ngx-typed-js.png)](https://nodei.co/npm/ngx-typed-js/)
+
 ## Table of contents
 
 - [Installation](#installation)
