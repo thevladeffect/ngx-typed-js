@@ -1,11 +1,13 @@
 {
   "name": "ngx-typed-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "typed.js": "^2.0.9"
   },
   "peerDependencies": {
     "@angular/common": "^7.1.0",
     "@angular/core": "^7.1.0"
-  }
+  },
+  "license": "MIT",
+  "keywords": ["typed", "typed.js", "typewriter"]
 }
