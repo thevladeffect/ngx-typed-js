@@ -3,5 +3,6 @@
   "dest": "../../dist/ngx-typed-js",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["typed.js"]
 }
