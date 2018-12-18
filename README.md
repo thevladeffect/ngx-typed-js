@@ -6,6 +6,8 @@ Typed.js is a library that types. Enter in any string, and watch it type at the 
 
 [![NPM](https://nodei.co/npm/ngx-typed-js.png)](https://nodei.co/npm/ngx-typed-js/)
 
+[Live demo](https://vlad.vidac.software/) - [Source code](https://github.com/thevladeffect/portfolio)
+
 ## Table of contents
 
 - [Installation](#installation)
