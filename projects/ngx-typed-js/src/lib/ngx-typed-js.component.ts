@@ -45,7 +45,7 @@ export class NgxTypedJsComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.typed = new Typed(
-      '.typing',
+      this.content.nativeElement.querySelector('.typing'),
       this.options,
     );
   }
