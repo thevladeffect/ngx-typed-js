@@ -51,7 +51,9 @@ export class NgxTypedJsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.updateCursorStyle();
+    if (this.showCursor !== false) {
+      this.updateCursorStyle();
+    }
   }
 
   public toggle(): void {
