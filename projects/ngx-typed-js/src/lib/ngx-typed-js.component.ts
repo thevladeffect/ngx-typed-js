@@ -44,16 +44,20 @@ export class NgxTypedJsComponent implements OnInit, AfterViewInit {
   @ViewChild('wrapper') private content;
 
   ngOnInit() {
-    this.typed = new Typed(
-      this.content.nativeElement.querySelector('.typing'),
-      this.options,
-    );
+//     this.typed = new Typed(
+//       this.content.nativeElement.querySelector('.typing'),
+//       this.options,
+//     );
   }
 
   ngAfterViewInit(): void {
     if (this.showCursor !== false) {
       this.updateCursorStyle();
     }
+    this.typed = new Typed(
+      this.content.nativeElement.querySelector('.typing'),
+      this.options,
+    );
   }
 
   public toggle(): void {
