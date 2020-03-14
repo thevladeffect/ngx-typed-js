@@ -41,7 +41,7 @@ export class NgxTypedJsComponent implements OnInit, AfterViewInit {
   @Output() private destroyed: EventEmitter<void> = new EventEmitter<void>();
 
   private typed: Typed;
-  @ViewChild('wrapper') private content;
+  @ViewChild('wrapper', { static: true }) private content;
 
   ngOnInit() {
     this.typed = new Typed(

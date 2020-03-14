@@ -7,7 +7,7 @@ import {NgxTypedJsComponent} from '../../projects/ngx-typed-js/src/lib/ngx-typed
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild(NgxTypedJsComponent) typed: NgxTypedJsComponent;
+  @ViewChild(NgxTypedJsComponent, { static: true }) typed: NgxTypedJsComponent;
   doSmth(): void {
     this.typed.start();
   }

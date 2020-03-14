@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/ngx-typed-js-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -49,6 +50,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -141,6 +146,11 @@
           "options": {
             "tsConfig": "projects/ngx-typed-js/tsconfig.lib.json",
             "project": "projects/ngx-typed-js/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-typed-js/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -166,5 +176,8 @@
       }
     }
   },
-  "defaultProject": "ngx-typed-js-demo"
+  "defaultProject": "ngx-typed-js-demo",
+  "cli": {
+    "analytics": "b5f6de1e-03de-4198-bf9c-bf8a29c7a64a"
+  }
 }
