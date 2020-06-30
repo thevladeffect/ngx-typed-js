@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
 import Typed, {TypedOptions} from 'typed.js';
 
 @Component({
@@ -43,14 +43,12 @@ export class NgxTypedJsComponent implements OnInit, AfterViewInit {
   private typed: Typed;
   @ViewChild('wrapper', { static: true }) private content;
 
-  ngOnInit() {
+  ngAfterViewInit(): void {
     this.typed = new Typed(
       this.content.nativeElement.querySelector('.typing'),
       this.options,
     );
-  }
 
-  ngAfterViewInit(): void {
     if (this.showCursor !== false) {
       this.updateCursorStyle();
     }
