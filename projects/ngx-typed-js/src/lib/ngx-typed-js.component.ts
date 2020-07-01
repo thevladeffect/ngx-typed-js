@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import Typed, {TypedOptions} from 'typed.js';
 
 @Component({
@@ -6,7 +6,7 @@ import Typed, {TypedOptions} from 'typed.js';
   templateUrl: 'ngx-typed-js.component.html',
   styleUrls: ['ngx-typed-js.component.css']
 })
-export class NgxTypedJsComponent implements OnInit, AfterViewInit {
+export class NgxTypedJsComponent implements AfterViewInit {
   @Input() private cursorColor?: string;
 
   @Input() private strings?: string[];
