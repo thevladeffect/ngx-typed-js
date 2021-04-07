@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild} from '@angular/core';
 import Typed, {TypedOptions} from 'typed.js';
 
 @Component({
@@ -6,12 +6,12 @@ import Typed, {TypedOptions} from 'typed.js';
   templateUrl: 'ngx-typed-js.component.html',
   styleUrls: ['ngx-typed-js.component.css']
 })
-export class NgxTypedJsComponent implements AfterViewInit {
+export class NgxTypedJsComponent implements AfterViewInit, OnChanges {
   @Input() private cursorColor?: string;
 
-  @Input() private strings?: string[];
+  @Input() private strings: string[];
   @Input() private stringsElement?: string;
-  @Input() private typeSpeed?: number;
+  @Input() private typeSpeed = 30;
   @Input() private startDelay?: number;
   @Input() private backSpeed?: number;
   @Input() private smartBackspace?: boolean;
@@ -19,7 +19,7 @@ export class NgxTypedJsComponent implements AfterViewInit {
   @Input() private backDelay?: number;
   @Input() private fadeOut?: boolean;
   @Input() private fadeOutClass?: string;
-  @Input() private fadeOutDelay?: boolean;
+  @Input() private fadeOutDelay?: number;
   @Input() private loop?: boolean;
   @Input() private loopCount?: number;
   @Input() private showCursor?: boolean;
@@ -82,7 +82,7 @@ export class NgxTypedJsComponent implements AfterViewInit {
       = (emitter: EventEmitter<number>) => (index: number) => emitter.emit(index);
 
     const opts = {
-      strings: this.strings,
+      strings: this.strings ?? [''],
       stringsElement: this.stringsElement,
       typeSpeed: this.typeSpeed,
       startDelay: this.startDelay,
@@ -127,5 +127,10 @@ export class NgxTypedJsComponent implements AfterViewInit {
 
     cursorElementStyle.fontSize = textElementStyle.fontSize;
     cursorElementStyle.color = this.cursorColor || textElementStyle.color;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.typed.destroy();
+    this.ngAfterViewInit();
   }
 }
