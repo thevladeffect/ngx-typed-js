@@ -1,5 +1,5 @@
-import {AfterViewInit, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild} from '@angular/core';
-import Typed, {TypedOptions} from 'typed.js';
+import { AfterViewInit, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
+import Typed, { TypedOptions } from 'typed.js';
 
 @Component({
   selector: 'ngx-typed-js',
@@ -7,27 +7,27 @@ import Typed, {TypedOptions} from 'typed.js';
   styleUrls: ['ngx-typed-js.component.css']
 })
 export class NgxTypedJsComponent implements AfterViewInit, OnChanges {
-  @Input() private cursorColor?: string;
+  @Input() public cursorColor?: string;
 
-  @Input() private strings: string[];
-  @Input() private stringsElement?: string;
-  @Input() private typeSpeed = 30;
-  @Input() private startDelay?: number;
-  @Input() private backSpeed?: number;
-  @Input() private smartBackspace?: boolean;
-  @Input() private shuffle?: boolean;
-  @Input() private backDelay?: number;
-  @Input() private fadeOut?: boolean;
-  @Input() private fadeOutClass?: string;
-  @Input() private fadeOutDelay?: number;
-  @Input() private loop?: boolean;
-  @Input() private loopCount?: number;
-  @Input() private showCursor?: boolean;
-  @Input() private cursorChar?: string;
-  @Input() private autoInsertCss?: boolean;
-  @Input() private attr?: string;
-  @Input() private bindInputFocusEvents?: boolean;
-  @Input() private contentType?: string;
+  @Input() public strings: string[];
+  @Input() public stringsElement?: string;
+  @Input() public typeSpeed = 30;
+  @Input() public startDelay?: number;
+  @Input() public backSpeed?: number;
+  @Input() public smartBackspace?: boolean;
+  @Input() public shuffle?: boolean;
+  @Input() public backDelay?: number;
+  @Input() public fadeOut?: boolean;
+  @Input() public fadeOutClass?: string;
+  @Input() public fadeOutDelay?: number;
+  @Input() public loop?: boolean;
+  @Input() public loopCount?: number;
+  @Input() public showCursor?: boolean;
+  @Input() public cursorChar?: string;
+  @Input() public autoInsertCss?: boolean;
+  @Input() public attr?: string;
+  @Input() public bindInputFocusEvents?: boolean;
+  @Input() public contentType?: string;
 
   @Output() private completed: EventEmitter<void> = new EventEmitter<void>();
   @Output() private preStringTyped: EventEmitter<number> = new EventEmitter<number>();
