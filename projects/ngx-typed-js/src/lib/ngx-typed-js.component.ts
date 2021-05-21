@@ -130,7 +130,9 @@ export class NgxTypedJsComponent implements AfterViewInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.typed.destroy();
-    this.ngAfterViewInit();
+    if (this.typed) {
+      this.typed.destroy();
+      this.ngAfterViewInit();
+    }
   }
 }
