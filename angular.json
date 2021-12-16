@@ -66,8 +66,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-          },
+          "options": {},
           "configurations": {
             "production": {
               "browserTarget": "ngx-typed-js-demo:build:production"
@@ -98,6 +97,15 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         }
@@ -136,6 +144,7 @@
   },
   "defaultProject": "ngx-typed-js-demo",
   "cli": {
-    "analytics": "b5f6de1e-03de-4198-bf9c-bf8a29c7a64a"
+    "analytics": "b5f6de1e-03de-4198-bf9c-bf8a29c7a64a",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
