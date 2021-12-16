@@ -2,7 +2,6 @@
   "name": "ngx-typed-js",
   "version": "2.1.0",
   "dependencies": {
-    "tslib": "^2.0.0",
     "typed.js": "^2.0.12"
   },
   "peerDependencies": {
