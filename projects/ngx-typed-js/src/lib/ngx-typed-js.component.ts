@@ -86,6 +86,7 @@ export class NgxTypedJsComponent implements AfterViewInit, OnChanges {
       stringsElement: this.stringsElement,
       typeSpeed: this.typeSpeed,
       startDelay: this.startDelay,
+      cursorChar: this.cursorChar,
       backSpeed: this.backSpeed,
       smartBackspace: this.smartBackspace,
       shuffle: this.shuffle,
